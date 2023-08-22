@@ -27,95 +27,95 @@ class Address extends Equatable {
   final int id;
 
   @JsonKey(name: 'id_customer')
-  final String idCustomer;
+  final String? idCustomer;
 
   @JsonKey(name: 'id_manufacturer')
-  final String idManufacturer;
+  final String? idManufacturer;
 
   @JsonKey(name: 'id_supplier')
-  final String idSupplier;
+  final String? idSupplier;
 
   @JsonKey(name: 'id_warehouse')
-  final String idWarehouse;
+  final String? idWarehouse;
 
   @JsonKey(name: 'id_country')
-  final String idCountry;
+  final String? idCountry;
 
   @JsonKey(name: 'id_state')
-  final String idState;
+  final String? idState;
 
   @JsonKey(name: 'alias')
-  final String alias;
+  final String? alias;
 
   @JsonKey(name: 'company')
-  final String company;
+  final String? company;
 
   @JsonKey(name: 'lastname')
-  final String lastname;
+  final String? lastname;
 
   @JsonKey(name: 'firstname')
-  final String firstname;
+  final String? firstname;
 
   @JsonKey(name: 'vat_number')
-  final String vatNumber;
+  final String? vatNumber;
 
   @JsonKey(name: 'address1')
-  final String address1;
+  final String? address1;
 
   @JsonKey(name: 'address2')
-  final String address2;
+  final String? address2;
 
   @JsonKey(name: 'postcode')
-  final String postcode;
+  final String? postcode;
 
   @JsonKey(name: 'city')
-  final String city;
+  final String? city;
 
   @JsonKey(name: 'other')
-  final String other;
+  final String? other;
 
   @JsonKey(name: 'phone')
-  final String phone;
+  final String? phone;
 
   @JsonKey(name: 'phone_mobile')
-  final String phoneMobile;
+  final String? phoneMobile;
 
   @JsonKey(name: 'dni')
-  final String dni;
+  final String? dni;
 
   @JsonKey(name: 'deleted')
-  final String deleted;
+  final String? deleted;
 
   @JsonKey(name: 'date_add')
-  final String dateAdd;
+  final String? dateAdd;
 
   @JsonKey(name: 'date_upd')
-  final String dateUpd;
+  final String? dateUpd;
 
   Address({
     required this.id,
-    required this.idCustomer,
-    required this.idManufacturer,
-    required this.idSupplier,
-    required this.idWarehouse,
-    required this.idCountry,
-    required this.idState,
-    required this.alias,
-    required this.company,
-    required this.lastname,
-    required this.firstname,
-    required this.vatNumber,
-    required this.address1,
-    required this.address2,
-    required this.postcode,
-    required this.city,
-    required this.other,
-    required this.phone,
-    required this.phoneMobile,
-    required this.dni,
-    required this.deleted,
-    required this.dateAdd,
-    required this.dateUpd,
+    this.idCustomer,
+    this.idManufacturer,
+    this.idSupplier,
+    this.idWarehouse,
+    this.idCountry,
+    this.idState,
+    this.alias,
+    this.company,
+    this.lastname,
+    this.firstname,
+    this.vatNumber,
+    this.address1,
+    this.address2,
+    this.postcode,
+    this.city,
+    this.other,
+    this.phone,
+    this.phoneMobile,
+    this.dni,
+    this.deleted,
+    this.dateAdd,
+    this.dateUpd,
   });
 
   factory Address.fromJson(Map<String, dynamic> json) =>

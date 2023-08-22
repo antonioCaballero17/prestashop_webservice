@@ -3,8 +3,6 @@ import 'dart:convert';
 import 'package:http/http.dart';
 import 'package:loggy/loggy.dart';
 import 'package:prestashop_webservice/prestashop_webservice.dart';
-import 'package:prestashop_webservice/src/model/address.dart';
-import 'package:prestashop_webservice/src/model/cart.dart';
 import 'package:quiver/core.dart';
 
 class PrestashopApiConfig {
