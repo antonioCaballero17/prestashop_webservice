@@ -57,6 +57,9 @@ class Order extends Equatable {
   @JsonKey(name: 'shipping_number')
   final String shippingNumber;
 
+  @JsonKey(name: 'id_address_delivery')
+  final String idAddressDelivery;
+
   @JsonKey(
     name: 'total_products',
     fromJson: JsonDouble.fromJson,
@@ -115,6 +118,7 @@ class Order extends Equatable {
     required this.note,
     required this.associations,
     required this.currentState,
+    required this.idAddressDelivery,
   });
 
   factory Order.fromJson(Map<String, dynamic> json) => _$OrderFromJson(json);

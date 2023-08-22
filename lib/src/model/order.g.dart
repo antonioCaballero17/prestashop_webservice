@@ -34,6 +34,7 @@ Order _$OrderFromJson(Map<String, dynamic> json) => Order(
           ? null
           : Associations.fromJson(json['associations'] as Map<String, dynamic>),
       currentState: JsonInt.fromJson(json['current_state'] as String),
+      idAddressDelivery: json['id_address_delivery'] as String,
     );
 
 Map<String, dynamic> _$OrderToJson(Order instance) => <String, dynamic>{
@@ -42,6 +43,7 @@ Map<String, dynamic> _$OrderToJson(Order instance) => <String, dynamic>{
       'date_add': JsonDate.toJson(instance.date),
       'payment': instance.payment,
       'shipping_number': instance.shippingNumber,
+      'id_address_delivery': instance.idAddressDelivery,
       'total_products': JsonDouble.toJson(instance.totalProducts),
       'total_shipping': JsonDouble.toJson(instance.totalShipping),
       'total_discounts': JsonDouble.toJson(instance.totalDiscounts),
