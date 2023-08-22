@@ -3,6 +3,8 @@
 /// More dartdocs go here.
 library;
 
+export 'src/model/address.dart';
+export 'src/model/cart.dart';
 export 'src/model/category.dart';
 export 'src/model/customer.dart';
 export 'src/model/manufacturer.dart';
