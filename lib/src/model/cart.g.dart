@@ -20,26 +20,28 @@ Map<String, dynamic> _$CartsResponseToJson(CartsResponse instance) =>
 
 Cart _$CartFromJson(Map<String, dynamic> json) => Cart(
       id: json['id'] as int,
-      idAddressDelivery: json['id_address_delivery'] as String,
-      idAddressInvoice: json['id_address_invoice'] as String,
-      idCurrency: json['id_currency'] as String,
-      idCustomer: json['id_customer'] as String,
-      idGuest: json['id_guest'] as String,
-      idLang: json['id_lang'] as String,
-      idShopGroup: json['id_shop_group'] as String,
-      idShop: json['id_shop'] as String,
-      idCarrier: json['id_carrier'] as String,
-      recyclable: json['recyclable'] as String,
-      gift: json['gift'] as String,
-      giftMessage: json['gift_message'] as String,
-      mobileTheme: json['mobile_theme'] as String,
-      deliveryOption: json['delivery_option'] as String,
-      secureKey: json['secure_key'] as String,
-      allowSeperatedPackage: json['allow_seperated_package'] as String,
-      dateAdd: json['date_add'] as String,
-      dateUpd: json['date_upd'] as String,
-      associations: CartAssociations.fromJson(
-          json['associations'] as Map<String, dynamic>),
+      idAddressDelivery: json['id_address_delivery'] as String?,
+      idAddressInvoice: json['id_address_invoice'] as String?,
+      idCurrency: json['id_currency'] as String?,
+      idCustomer: json['id_customer'] as String?,
+      idGuest: json['id_guest'] as String?,
+      idLang: json['id_lang'] as String?,
+      idShopGroup: json['id_shop_group'] as String?,
+      idShop: json['id_shop'] as String?,
+      idCarrier: json['id_carrier'] as String?,
+      recyclable: json['recyclable'] as String?,
+      gift: json['gift'] as String?,
+      giftMessage: json['gift_message'] as String?,
+      mobileTheme: json['mobile_theme'] as String?,
+      deliveryOption: json['delivery_option'] as String?,
+      secureKey: json['secure_key'] as String?,
+      allowSeperatedPackage: json['allow_seperated_package'] as String?,
+      dateAdd: json['date_add'] as String?,
+      dateUpd: json['date_upd'] as String?,
+      associations: json['associations'] == null
+          ? null
+          : CartAssociations.fromJson(
+              json['associations'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$CartToJson(Cart instance) => <String, dynamic>{

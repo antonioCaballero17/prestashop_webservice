@@ -27,61 +27,61 @@ class Cart extends Equatable {
   final int id;
 
   @JsonKey(name: 'id_address_delivery')
-  final String idAddressDelivery;
+  final String? idAddressDelivery;
 
   @JsonKey(name: 'id_address_invoice')
-  final String idAddressInvoice;
+  final String? idAddressInvoice;
 
   @JsonKey(name: 'id_currency')
-  final String idCurrency;
+  final String? idCurrency;
 
   @JsonKey(name: 'id_customer')
-  final String idCustomer;
+  final String? idCustomer;
 
   @JsonKey(name: 'id_guest')
-  final String idGuest;
+  final String? idGuest;
 
   @JsonKey(name: 'id_lang')
-  final String idLang;
+  final String? idLang;
 
   @JsonKey(name: 'id_shop_group')
-  final String idShopGroup;
+  final String? idShopGroup;
 
   @JsonKey(name: 'id_shop')
-  final String idShop;
+  final String? idShop;
 
   @JsonKey(name: 'id_carrier')
-  final String idCarrier;
+  final String? idCarrier;
 
   @JsonKey(name: 'recyclable')
-  final String recyclable;
+  final String? recyclable;
 
   @JsonKey(name: 'gift')
-  final String gift;
+  final String? gift;
 
   @JsonKey(name: 'gift_message')
-  final String giftMessage;
+  final String? giftMessage;
 
   @JsonKey(name: 'mobile_theme')
-  final String mobileTheme;
+  final String? mobileTheme;
 
   @JsonKey(name: 'delivery_option')
-  final String deliveryOption;
+  final String? deliveryOption;
 
   @JsonKey(name: 'secure_key')
-  final String secureKey;
+  final String? secureKey;
 
   @JsonKey(name: 'allow_seperated_package')
-  final String allowSeperatedPackage;
+  final String? allowSeperatedPackage;
 
   @JsonKey(name: 'date_add')
-  final String dateAdd;
+  final String? dateAdd;
 
   @JsonKey(name: 'date_upd')
-  final String dateUpd;
+  final String? dateUpd;
 
   @JsonKey(name: 'associations')
-  final CartAssociations associations;
+  final CartAssociations? associations;
 
   Cart({
     required this.id,
