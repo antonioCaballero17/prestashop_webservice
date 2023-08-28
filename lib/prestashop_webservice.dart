@@ -6,6 +6,7 @@ library;
 export 'src/model/address.dart';
 export 'src/model/cart.dart';
 export 'src/model/category.dart';
+export 'src/model/combination.dart';
 export 'src/model/customer.dart';
 export 'src/model/manufacturer.dart';
 export 'src/model/order.dart';

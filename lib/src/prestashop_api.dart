@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart';
 import 'package:loggy/loggy.dart';
 import 'package:prestashop_webservice/prestashop_webservice.dart';
+import 'package:prestashop_webservice/src/model/combination.dart';
 import 'package:quiver/core.dart';
 
 class PrestashopApiConfig {
@@ -47,12 +48,30 @@ class PrestashopApi with UiLoggy {
 
   Future<Optional<Cart>> cart(final int id) async {
     final payload = await _doGet(
-      '${_conf.webserviceUrl}/api/addresses/$id?ws_key=${_conf.apiKey}&output_format=JSON&display=full',
+      '${_conf.webserviceUrl}/api/carts/$id?ws_key=${_conf.apiKey}&output_format=JSON&display=full',
       single: true,
     );
     return payload == null
         ? Optional.absent()
         : Optional.of(CartsResponse.fromJson(payload).items.single);
+  }
+
+  /* Combinations */
+  Future<List<Combination>> combinations() async {
+    final payload = await _doGet(
+      '${_conf.webserviceUrl}/api/combinations?ws_key=${_conf.apiKey}&output_format=JSON&display=full',
+    );
+    return CombinationsResponse.fromJson(payload).items;
+  }
+
+  Future<Optional<Combination>> combination(final int id) async {
+    final payload = await _doGet(
+      '${_conf.webserviceUrl}/api/combinations/$id?ws_key=${_conf.apiKey}&output_format=JSON&display=full',
+      single: true,
+    );
+    return payload == null
+        ? Optional.absent()
+        : Optional.of(CombinationsResponse.fromJson(payload).items.single);
   }
 
   /* Customers */
