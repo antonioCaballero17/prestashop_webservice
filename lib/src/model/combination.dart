@@ -24,67 +24,67 @@ class CombinationsResponse extends Equatable {
 @JsonSerializable()
 class Combination extends Equatable {
   @JsonKey(name: 'id')
-  final int id;
+  final int? id;
 
   @JsonKey(name: 'id_product')
-  final String idProduct;
+  final String? idProduct;
 
   @JsonKey(name: 'location')
-  final String location;
+  final dynamic location;
 
   @JsonKey(name: 'ean13')
-  final String ean13;
+  final String? ean13;
 
   @JsonKey(name: 'isbn')
-  final String isbn;
+  final String? isbn;
 
   @JsonKey(name: 'upc')
   final String upc;
 
   @JsonKey(name: 'mpn')
-  final String mpn;
+  final String? mpn;
 
   @JsonKey(name: 'quantity')
-  final int quantity;
+  final int? quantity;
 
   @JsonKey(name: 'reference')
-  final String reference;
+  final String? reference;
 
   @JsonKey(name: 'supplier_reference')
-  final String supplierReference;
+  final String? supplierReference;
 
   @JsonKey(name: 'wholesale_price')
-  final String wholesalePrice;
+  final String? wholesalePrice;
 
   @JsonKey(name: 'price')
-  final String price;
+  final String? price;
 
   @JsonKey(name: 'ecotax')
-  final String ecotax;
+  final String? ecotax;
 
   @JsonKey(name: 'weight')
-  final String weight;
+  final String? weight;
 
   @JsonKey(name: 'unit_price_impact')
-  final String unitPriceImpact;
+  final String? unitPriceImpact;
 
   @JsonKey(name: 'minimal_quantity')
-  final String minimalQuantity;
+  final String? minimalQuantity;
 
   @JsonKey(name: 'low_stock_threshold')
-  final String lowStockThreshold;
+  final String? lowStockThreshold;
 
   @JsonKey(name: 'low_stock_alert')
-  final String lowStockAlert;
+  final String? lowStockAlert;
 
   @JsonKey(name: 'default_on')
-  final String defaultOn;
+  final String? defaultOn;
 
   @JsonKey(name: 'available_date')
-  final String availableDate;
+  final String? availableDate;
 
   @JsonKey(name: 'associations')
-  final CombinationAssociations associations;
+  final CombinationAssociations? associations;
 
   Combination({
     required this.id,
@@ -144,7 +144,7 @@ class CombinationAssociations extends Equatable {
 @JsonSerializable()
 class ProductOptionValue extends Equatable {
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   ProductOptionValue({
     required this.id,
@@ -162,7 +162,7 @@ class ProductOptionValue extends Equatable {
 @JsonSerializable()
 class Image extends Equatable {
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
 
   Image({
     required this.id,

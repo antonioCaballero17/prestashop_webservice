@@ -21,28 +21,30 @@ Map<String, dynamic> _$CombinationsResponseToJson(
     };
 
 Combination _$CombinationFromJson(Map<String, dynamic> json) => Combination(
-      id: json['id'] as int,
-      idProduct: json['id_product'] as String,
-      location: json['location'] as String,
-      ean13: json['ean13'] as String,
-      isbn: json['isbn'] as String,
+      id: json['id'] as int?,
+      idProduct: json['id_product'] as String?,
+      location: json['location'],
+      ean13: json['ean13'] as String?,
+      isbn: json['isbn'] as String?,
       upc: json['upc'] as String,
-      mpn: json['mpn'] as String,
-      quantity: json['quantity'] as int,
-      reference: json['reference'] as String,
-      supplierReference: json['supplier_reference'] as String,
-      wholesalePrice: json['wholesale_price'] as String,
-      price: json['price'] as String,
-      ecotax: json['ecotax'] as String,
-      weight: json['weight'] as String,
-      unitPriceImpact: json['unit_price_impact'] as String,
-      minimalQuantity: json['minimal_quantity'] as String,
-      lowStockThreshold: json['low_stock_threshold'] as String,
-      lowStockAlert: json['low_stock_alert'] as String,
-      defaultOn: json['default_on'] as String,
-      availableDate: json['available_date'] as String,
-      associations: CombinationAssociations.fromJson(
-          json['associations'] as Map<String, dynamic>),
+      mpn: json['mpn'] as String?,
+      quantity: json['quantity'] as int?,
+      reference: json['reference'] as String?,
+      supplierReference: json['supplier_reference'] as String?,
+      wholesalePrice: json['wholesale_price'] as String?,
+      price: json['price'] as String?,
+      ecotax: json['ecotax'] as String?,
+      weight: json['weight'] as String?,
+      unitPriceImpact: json['unit_price_impact'] as String?,
+      minimalQuantity: json['minimal_quantity'] as String?,
+      lowStockThreshold: json['low_stock_threshold'] as String?,
+      lowStockAlert: json['low_stock_alert'] as String?,
+      defaultOn: json['default_on'] as String?,
+      availableDate: json['available_date'] as String?,
+      associations: json['associations'] == null
+          ? null
+          : CombinationAssociations.fromJson(
+              json['associations'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$CombinationToJson(Combination instance) =>
@@ -90,7 +92,7 @@ Map<String, dynamic> _$CombinationAssociationsToJson(
 
 ProductOptionValue _$ProductOptionValueFromJson(Map<String, dynamic> json) =>
     ProductOptionValue(
-      id: json['id'] as String,
+      id: json['id'] as String?,
     );
 
 Map<String, dynamic> _$ProductOptionValueToJson(ProductOptionValue instance) =>
@@ -99,7 +101,7 @@ Map<String, dynamic> _$ProductOptionValueToJson(ProductOptionValue instance) =>
     };
 
 Image _$ImageFromJson(Map<String, dynamic> json) => Image(
-      id: json['id'] as String,
+      id: json['id'] as String?,
     );
 
 Map<String, dynamic> _$ImageToJson(Image instance) => <String, dynamic>{
