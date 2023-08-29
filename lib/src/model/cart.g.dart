@@ -36,8 +36,8 @@ Cart _$CartFromJson(Map<String, dynamic> json) => Cart(
       deliveryOption: json['delivery_option'] as String?,
       secureKey: json['secure_key'] as String?,
       allowSeperatedPackage: json['allow_seperated_package'] as String?,
-      dateAdd: json['date_add'] as String?,
-      dateUpd: json['date_upd'] as String?,
+      dateAdd: JsonDate.fromJson(json['date_add'] as String),
+      dateUpd: JsonDate.fromJson(json['date_upd'] as String),
       associations: json['associations'] == null
           ? null
           : CartAssociations.fromJson(
@@ -62,8 +62,8 @@ Map<String, dynamic> _$CartToJson(Cart instance) => <String, dynamic>{
       'delivery_option': instance.deliveryOption,
       'secure_key': instance.secureKey,
       'allow_seperated_package': instance.allowSeperatedPackage,
-      'date_add': instance.dateAdd,
-      'date_upd': instance.dateUpd,
+      'date_add': JsonDate.toJson(instance.dateAdd),
+      'date_upd': JsonDate.toJson(instance.dateUpd),
       'associations': instance.associations,
     };
 

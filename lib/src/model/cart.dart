@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:prestashop_webservice/src/model/converter.dart';
 
 part 'cart.g.dart';
 
@@ -74,11 +75,13 @@ class Cart extends Equatable {
   @JsonKey(name: 'allow_seperated_package')
   final String? allowSeperatedPackage;
 
-  @JsonKey(name: 'date_add')
-  final String? dateAdd;
+  @JsonKey(
+      name: 'date_add', fromJson: JsonDate.fromJson, toJson: JsonDate.toJson)
+  final DateTime dateAdd;
 
-  @JsonKey(name: 'date_upd')
-  final String? dateUpd;
+  @JsonKey(
+      name: 'date_upd', fromJson: JsonDate.fromJson, toJson: JsonDate.toJson)
+  final DateTime dateUpd;
 
   @JsonKey(name: 'associations')
   final CartAssociations? associations;
