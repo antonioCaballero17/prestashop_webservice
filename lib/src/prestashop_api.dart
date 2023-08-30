@@ -19,6 +19,10 @@ class PrestashopApi with UiLoggy {
 
   PrestashopApi(this._http, this._conf);
 
+  String getImageUrl({required int productId, required int imageId}) {
+    return '${_conf.webserviceUrl}/api/images/products/$productId/$imageId?ws_key=${_conf.apiKey}';
+  }
+
   /* Address */
   Future<List<Address>> addresses() async {
     final payload = await _doGet(
