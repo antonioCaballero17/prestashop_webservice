@@ -126,7 +126,7 @@ class Order extends Equatable {
   Map<String, dynamic> toJson() => _$OrderToJson(this);
 
   @override
-  List<Object?> get props => [id];
+  List<Object?> get props => [id, currentState];
 
   @override
   String toString() => _encoder.convert(toJson());
